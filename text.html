@@ -1,0 +1,89 @@
+<header class="bg-white shadow-sm fixed w-full top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <div
+          class="w-12 h-12 bg-[oklch(0.228_0.043_258.42)] rounded-full flex items-center justify-center"
+        >
+          <img
+            alt="Logo de Aline Tomas"
+            class="w-8 h-8"
+            src="./PsicologiaSfundo.png"
+          />
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-gray-800">Aline Tomas</h1>
+          <p class="text-sm text-gray-600">Psicóloga</p>
+        </div>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav class="desktop-menu">
+        <div class="flex space-x-1">
+          <button
+            onclick="scrollToSection('inicio')"
+            class="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700 transition-colors"
+          >
+            Início
+          </button>
+          <button
+            onclick="scrollToSection('sobre')"
+            class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Sobre Mim
+          </button>
+          <button
+            onclick="scrollToSection('servicos')"
+            class="px-4 py-2 text-sm font-medium text-white bg-yellow-600 rounded-lg hover:bg-yellow-700 transition-colors"
+          >
+            Serviços
+          </button>
+          <button
+            onclick="scrollToSection('contato')"
+            class="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors"
+          >
+            Contato
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger active" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu active" id="mobileMenu">
+      <div class="py-4 space-y-2">
+        <button
+          onclick="scrollToSection('inicio'); toggleMobileMenu();"
+          class="block w-full text-left px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+        >
+          Início
+        </button>
+        <button
+          onclick="scrollToSection('sobre'); toggleMobileMenu();"
+          class="block w-full text-left px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+        >
+          Sobre Mim
+        </button>
+        <button
+          onclick="scrollToSection('servicos'); toggleMobileMenu();"
+          class="block w-full text-left px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+        >
+          Serviços
+        </button>
+        <button
+          onclick="scrollToSection('contato'); toggleMobileMenu();"
+          class="block w-full text-left px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+        >
+          Contato
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+# Dependências e arquivos de build
+node_modules/
+dist/
+
+# Arquivos de ambiente
+.env
+.env.local
