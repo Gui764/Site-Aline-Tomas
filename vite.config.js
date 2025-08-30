@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   base: "/",
   build: {
-    // Garante que a pasta de saída seja 'dist'
-    outDir: "dist",
+    // Esta linha garante que o build seja na pasta 'docs'
+    outDir: "docs",
   },
   resolve: {
     alias: {
