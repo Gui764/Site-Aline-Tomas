@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/",
   build: {
-    // Esta linha garante que o build seja na pasta 'docs'
+    // Garante que a pasta de saída seja 'docs'
     outDir: "docs",
   },
   resolve: {
