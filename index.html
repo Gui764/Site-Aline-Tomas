@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" style="scroll-behavior: smooth;">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,397 +8,177 @@
     <meta name="description" content="Aline Tomas - Psicóloga Clínica especializada em Terapia Sistêmica. Atendimento para adolescentes, adultos, casais e famílias. Presencial e online em São Paulo."/>
     <meta name="keywords" content="psicóloga, terapia, psicologia, terapia de casal, terapia familiar, São Paulo, Campo Limpo"/>
     
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Definindo as cores personalizadas como variáveis */
-        :root {
-            --cor-fundo-escuro: #101828;
-            --cor-fundo-claro: #eff7fd;
-            --cor-texto-escuro: #101828;
-            --cor-texto-claro: #FFFFFF;
-            --cor-acento: #3b82f6;
-            --cor-texto-paragrafo: #374151;
-            --cor-whatsapp: #25D366;
-        }
-
-        /* Estilos Globais */
         body {
-            margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: white;
-            color: var(--cor-texto-paragrafo);
-            line-height: 1.6;
         }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .bg-whatsapp-green {
+            background-color: #25D366;
         }
-        section {
-            padding: 80px 0;
-        }
-        h1, h2, h3 {
-            color: var(--cor-texto-escuro);
-            font-weight: 700;
-        }
-        h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .section-title .line {
-            width: 100px;
-            height: 4px;
-            background-color: var(--cor-acento);
-            margin: 0 auto;
-        }
-
-        /* Cabeçalho */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 12px;
-            padding-bottom: 12px;
-        }
-        header .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        header .logo-container img {
-            width: 128px;
-            height: auto;
-            margin-right: 12px;
-        }
-        header .logo-text h1 {
-            font-size: 1.25rem;
-            margin: 0;
-        }
-        header .logo-text p {
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin: 0;
-        }
-        header nav a {
-            margin: 0 16px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--cor-texto-escuro);
-            transition: color 0.3s;
-        }
-        header nav a:hover {
-            color: var(--cor-acento);
-        }
-
-        /* Seção Inicial (Hero) */
-        #inicio {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            background-image: url('public/hero_background.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        #inicio .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(239, 247, 253, 0.7); /* fundo-claro com 70% de opacidade */
-        }
-        #inicio .content {
-            position: relative;
-            z-index: 1;
-        }
-        #inicio h2 {
-            font-size: 3.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-        #inicio p {
-            font-size: 1.25rem;
-            color: var(--cor-texto-paragrafo);
-        }
-        #inicio .cta-button {
-            margin-top: 2rem;
-            display: inline-block;
-            background-color: var(--cor-fundo-escuro);
-            color: var(--cor-texto-claro);
-            padding: 12px 32px;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        #inicio .cta-button:hover {
-            transform: scale(1.05);
-            background-color: #333d4d;
-        }
-
-        /* Grid genérico para seções */
-        .grid-container {
-            display: grid;
-            gap: 3rem;
-        }
-        @media (min-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-                align-items: center;
-            }
-        }
-        @media (min-width: 1024px) {
-            .grid-3-cols {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        /* Seção Sobre Mim */
-        #sobre img {
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        #sobre .specialization {
-            background-color: var(--cor-fundo-claro);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border-left: 4px solid var(--cor-acento);
-        }
-
-        /* Seção Missão, Visão, Valores */
-        #missao {
-            background-color: var(--cor-fundo-escuro);
-            color: var(--cor-texto-claro);
-        }
-        #missao h2, #missao h3 {
-             color: var(--cor-texto-claro);
-        }
-        #missao .card {
-            background-color: white;
-            color: var(--cor-texto-escuro);
-            padding: 2rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-         #missao .card h3 {
-             color: var(--cor-texto-escuro);
-         }
-
-        /* Seção Serviços */
-        #servicos {
-             background-color: var(--cor-fundo-claro);
-        }
-        #servicos .card {
-             background-color: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s, transform 0.3s;
-        }
-        #servicos .card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            transform: translateY(-5px);
-        }
-
-        /* Seção Contato */
-        #contato .contact-card {
-            background-color: var(--cor-fundo-claro);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-        }
-        #contato .contact-info {
-            text-align: left;
-        }
-        #contato .whatsapp-button {
-             display: inline-block;
-             background-color: var(--cor-whatsapp);
-             padding: 1rem;
-             border-radius: 9999px;
-             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-             transition: transform 0.3s;
-        }
-        #contato .whatsapp-button:hover {
-            transform: scale(1.1);
-        }
-        #contato .whatsapp-button img {
-            width: 4rem;
-            height: 4rem;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--cor-fundo-escuro);
-            color: var(--cor-texto-claro);
-            padding: 2rem 0;
-            text-align: center;
-        }
-
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="public/PsicologiaSfundo.png" alt="Logo de Aline Tomas" />
-                <div class="logo-text">
-                    <h1>Aline Tomas</h1>
-                    <p>Psicóloga</p>
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="public/PsicologiaSfundo.png" alt="Logo de Aline Tomas" class="w-24 md:w-32 h-auto" />
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold">Aline Tomas</h1>
+                        <p class="text-xs md:text-sm text-gray-600">Psicóloga</p>
+                    </div>
                 </div>
+                <nav class="hidden md:flex space-x-8 font-semibold">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 transition-colors">Sobre Mim</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-blue-600 transition-colors">Serviços</a>
+                    <a href="#contato" class="text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                </nav>
             </div>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre Mim</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#contato">Contato</a>
-            </nav>
         </div>
     </header>
 
-    <main>
-        <section id="inicio">
-            <div class="overlay"></div>
-            <div class="content">
-                <h2>Aline Tomas</h2>
-                <p>Psicóloga</p>
-                <a href="#contato" class="cta-button">Agendar Consulta</a>
-            </div>
-        </section>
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center text-center px-4" style="background-image: url('public/hero_background.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-blue-900/40"></div>
+        <div class="relative z-10 pt-20">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Aline Tomas</h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto text-white drop-shadow-md">Psicóloga</p>
+            <a href="#contato" class="mt-8 inline-block bg-white text-blue-800 font-bold px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gray-200 shadow-xl">
+                Agendar Consulta
+            </a>
+        </div>
+    </section>
 
-        <section id="sobre">
-            <div class="container">
-                <div class="section-title">
-                    <p>Psicoterapia especializada para adolescentes, adultos, casais e famílias</p>
-                    <h2>Sobre Mim</h2>
-                    <div class="line"></div>
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                 <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                    Psicoterapia especializada para adolescentes, adultos, casais e famílias
+                </p>
+                <h2 class="text-4xl font-bold mb-4">Sobre Mim</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold mb-4">Olá! Sou a Aline Tomas</h3>
+                    <p class="leading-relaxed"><strong>Psicóloga com CRP: 06/120927</strong>, formada há 11 anos e com 10 anos de vivência no mundo do trabalho em psicologia social.</p>
+                    <p class="leading-relaxed">Minha experiência inclui atendimentos individuais e em grupos, avaliando os problemas da sociedade nos eixos de saúde pública e políticas sociais. Tenho experiência em acompanhamentos em casos de violência doméstica, álcool e droga, orientação sobre direitos da criança e adolescentes em casa de acolhimento, atendimentos de abuso infantil, pessoas em situação de rua, acolhimento e orientação para grupos de família.</p>
+                    <p class="leading-relaxed">Atuo no consultório clínico há 6 anos como <strong>Terapeuta de Família e Casal</strong>, atendimentos de adolescente e adulto, buscando sempre aprimorar meus conhecimentos ofertando um melhor atendimento.</p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                        <h4 class="font-semibold mb-2">Especialização:</h4>
+                        <p>Intervenção e Práticas Sistêmica - Terapia Família e Casal</p>
+                        <p class="mt-2">Estudante de Neuropsicologia</p>
+                    </div>
                 </div>
-                <div class="grid-container">
-                    <div>
-                        <h3>Olá! Sou a Aline Tomas</h3>
-                        <p><strong>Psicóloga com CRP: 06/120927</strong>, formada há 11 anos e com 10 anos de vivência no mundo do trabalho em psicologia social.</p>
-                        <p>Minha experiência inclui atendimentos individuais e em grupos, avaliando os problemas da sociedade nos eixos de saúde pública e políticas sociais. Tenho experiência em acompanhamentos em casos de violência doméstica, álcool e droga, orientação sobre direitos da criança e adolescentes em casa de acolhimento, atendimentos de abuso infantil, pessoas em situação de rua, acolhimento e orientação para grupos de família.</p>
-                        <p>Atuo no consultório clínico há 6 anos como <strong>Terapeuta de Família e Casal</strong>, atendimentos de adolescente e adulto, buscando sempre aprimorar meus conhecimentos ofertando um melhor atendimento.</p>
-                        <div class="specialization">
-                            <h4>Especialização:</h4>
-                            <p>Intervenção e Práticas Sistêmica - Terapia Família e Casal</p>
-                            <p>Estudante de Neuropsicologia</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="public/Foto Aline Tomas.png" alt="Foto de Aline Tomas" />
-                    </div>
+                <div class="flex justify-center">
+                    <img src="public/Foto Aline Tomas.png" alt="Foto de Aline Tomas" class="rounded-lg shadow-2xl w-full max-w-sm" />
                 </div>
             </div>
-        </section>
-        
-        <section id="missao">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Missão, Visão, Valores</h2>
-                    <div class="line"></div>
-                    <p>Atendimento presencial e online</p>
+        </div>
+    </section>
+    
+    <section id="missao" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Missão, Visão, Valores</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                 <p class="text-xl text-gray-700 mt-4">Atendimento presencial e online</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Missão</h3>
+                    <p>Oferecer um espaço de acolhimento e escuta especializada, onde indivíduos, casais e famílias encontram apoio para florescer, superar desafios e construir relações mais autênticas e saudáveis.</p>
                 </div>
-                <div class="grid-container grid-3-cols">
-                    <div class="card">
-                        <h3>Missão</h3>
-                        <p>Oferecer um espaço de acolhimento e escuta especializada, onde indivíduos, casais e famílias encontram apoio para florescer, superar desafios e construir relações mais autênticas e saudáveis.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Visão</h3>
-                        <p>Ser uma referência em cuidado e transformação humana, contribuindo para uma sociedade com pessoas mais resilientes, conectadas e emocionalmente saudáveis.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Valores</h3>
-                        <p>
-                            • <strong>Acolhimento:</strong> Um espaço seguro, empático e livre de julgamentos.<br>
-                            • <strong>Ética e Respeito:</strong> Compromisso absoluto com a confidencialidade.<br>
-                            • <strong>Transformação:</strong> Dedicação total ao seu crescimento.<br>
-                            • <strong>Humanização:</strong> Um olhar para o ser humano em sua totalidade.
-                        </p>
-                    </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Visão</h3>
+                    <p>Ser uma referência em cuidado e transformação humana, contribuindo para uma sociedade com pessoas mais resilientes, conectadas e emocionalmente saudáveis.</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Valores</h3>
+                    <p class="text-left text-sm">
+                        • <strong>Acolhimento:</strong> Um espaço seguro, empático e livre de julgamentos, onde sua história é ouvida e respeitada.<br>
+                        • <strong>Ética e Respeito:</strong> Compromisso absoluto com a confidencialidade, a integridade e a sua autonomia em todo o processo.<br>
+                        • <strong>Transformação:</strong> Dedicação total ao seu crescimento, buscando um aprimoramento contínuo para facilitar suas conquistas e superações.<br>
+                        • <strong>Humanização:</strong> Um olhar para o ser humano em sua totalidade, valorizando suas experiências, seu contexto e sua singularidade.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="servicos">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Meus Serviços</h2>
-                    <div class="line"></div>
-                    <p>Atendimento presencial e online</p>
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Meus Serviços</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-xl text-gray-700 mt-4">Atendimento presencial e online</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Terapia Individual</h3>
+                    <p class="text-gray-600 mb-4">Atendimento para adolescentes e adultos com foco no crescimento pessoal e bem-estar emocional.</p>
+                    <ul class="text-sm text-left list-disc list-inside">
+                        <li>Ansiedade e depressão</li>
+                        <li>Autoestima e autoconfiança</li>
+                        <li>Gestão de emoções</li>
+                    </ul>
                 </div>
-                <div class="grid-container grid-3-cols">
-                    <div class="card">
-                        <h3>Terapia Individual</h3>
-                        <p>Atendimento para adolescentes e adultos com foco no crescimento pessoal e bem-estar emocional.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Terapia de Casal</h3>
-                        <p>Especialização em Terapia Sistêmica para fortalecer relacionamentos e resolver conflitos.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Terapia Familiar</h3>
-                        <p>Abordagem sistêmica para melhorar a dinâmica familiar e promover harmonia no lar.</p>
-                    </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Terapia de Casal</h3>
+                    <p class="text-gray-600 mb-4">Especialização em Terapia Sistêmica para fortalecer relacionamentos e resolver conflitos.</p>
+                     <ul class="text-sm text-left list-disc list-inside">
+                        <li>Comunicação efetiva</li>
+                        <li>Resolução de conflitos</li>
+                        <li>Fortalecimento do vínculo</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Terapia Familiar</h3>
+                    <p class="text-gray-600 mb-4">Abordagem sistêmica para melhorar a dinâmica familiar e promover harmonia no lar.</p>
+                     <ul class="text-sm text-left list-disc list-inside">
+                        <li>Dinâmica familiar</li>
+                        <li>Orientação parental</li>
+                        <li>Mediação de conflitos</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contato">
-            <div class="container">
-                 <div class="section-title">
-                    <h2>Entre em Contato</h2>
-                    <div class="line"></div>
-                    <p>Estou aqui para ajudar você em sua jornada de bem-estar.</p>
-                </div>
-                <div class="grid-container">
-                    <div class="contact-info">
-                        <p><strong>Localização:</strong><br>Rua Heitor Alves de Amorim, 31, Campo Limpo - São Paulo</p>
-                        <p><strong>Telefone:</strong><br>(11) 95206-4305</p>
-                        <p><strong>Email:</strong><br>alinetomas63@yahoo.com.br</p>
-                        <p><strong>Modalidades:</strong><br>Atendimento presencial e online</p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Agende sua Consulta</h3>
-                        <a href="https://api.whatsapp.com/send/?phone=5511952064305&text=Ol%C3%A1%2C+Aline%21+Encontrei+seu+contato+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+as+consultas." class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-                            <img src="public/WhatsApp_Logo.png" alt="Ícone do WhatsApp" />
-                        </a>
-                    </div>
+    <section id="contato" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-xl text-gray-700 mt-4">Estou aqui para ajudar você em sua jornada de bem-estar.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Agende sua Consulta pelo WhatsApp</h3>
+                <a href="https://api.whatsapp.com/send/?phone=5511952064305&text=Ol%C3%A1%2C+Aline%21+Encontrei+seu+contato+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+as+consultas." target="_blank" rel="noopener noreferrer" class="inline-block bg-whatsapp-green hover:bg-green-700 rounded-full p-4 transition-transform transform hover:scale-110 shadow-lg">
+                    <img src="public/WhatsApp_Logo.png" alt="Ícone do WhatsApp" class="w-16 h-16" />
+                </a>
+                <div class="mt-8 text-left space-y-4">
+                     <p><strong>Telefone:</strong> (11) 95206-4305</p>
+                     <p><strong>Email:</strong> alinetomas63@yahoo.com.br</p>
+                     <p><strong>Localização:</strong> Rua Heitor Alves de Amorim, 31, Campo Limpo - São Paulo</p>
+                     <p><strong>Modalidades:</strong> Atendimento presencial e online</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p><strong>Aline Tomas</strong> - Psicóloga - CRP: 06/120927</p>
-            <p>© 2024 Aline Tomas - Psicóloga. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2"><strong>Aline Tomas</strong> - Psicóloga - CRP: 06/120927</p>
+            <p class="text-sm text-gray-400">Transformando vidas através do cuidado e acolhimento em psicoterapia.</p>
+            <p class="text-xs text-gray-500 mt-4">© 2024 Aline Tomas - Psicóloga. Todos os direitos reservados.</p>
         </div>
     </footer>
 
