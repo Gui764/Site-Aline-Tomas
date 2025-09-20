@@ -15,7 +15,7 @@
         theme: {
           extend: {
             colors: {
-              'azul-marinho': '#000c26',
+              'azul-marinho': '#101828',
               'azul-gelo': '#eff7fd',
               'verde-azulado': '#4A908A',
               'branco': '#FFFFFF',
@@ -37,20 +37,30 @@
         .bg-whatsapp-green {
             background-color: #25D366;
         }
+        /* Fundo padrão para desktop */
+        #inicio {
+            background-image: url('public/hero_background.jpg');
+        }
+        /* Media Query: troca o fundo para telas menores (celulares) */
+        @media (max-width: 768px) {
+            #inicio {
+                background-image: url('public/heroBackgroundMob.jpg');
+            }
+        }
     </style>
 </head>
 <body class="bg-white text-cinza-texto">
 
-    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <header class="fixed top-0 w-full z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <img src="public/PsicologiaSfundo.png" alt="Logo de Aline Tomas" class="w-24 md:w-32 h-auto" />
                     <div>
-                        <h1 class="text-lg md:text-xl font-bold">Aline Tomas</h1>
+                        <h1 class="text-lg md:text-xl font-bold text-azul-marinho">Aline Tomas</h1>
                         <p class="text-xs md:text-sm text-gray-600">Psicóloga</p>
                     </div>
-                    </div>
+                </div>
                 <nav class="hidden md:flex space-x-8 font-semibold">
                     <a href="#inicio" class="text-azul-marinho hover:text-verde-azulado transition-colors">Início</a>
                     <a href="#sobre" class="text-azul-marinho hover:text-verde-azulado transition-colors">Sobre Mim</a>
@@ -61,7 +71,7 @@
         </div>
     </header>
 
-    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-end text-center px-4 pb-20" style="background-image: url('public/hero_background.jpg'); background-size: cover; background-position: center;">
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-end text-center px-4 pb-20 bg-cover bg-center">
         <div class="absolute inset-0 bg-azul-gelo/70"></div>
         <div class="relative z-10 flex flex-col items-center justify-end h-full w-full">
             <a href="#contato" class="mt-auto bg-azul-marinho text-branco font-bold px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gray-700 shadow-xl">
