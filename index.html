@@ -10,6 +10,22 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'azul-marinho': '#000c26',
+              'azul-gelo': '#eff7fd',
+              'verde-azulado': '#4A908A',
+              'branco': '#FFFFFF',
+              'cinza-texto': '#374151',
+            }
+          }
+        }
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,9 +39,9 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-cinza-texto">
 
-    <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
@@ -34,23 +50,21 @@
                         <h1 class="text-lg md:text-xl font-bold">Aline Tomas</h1>
                         <p class="text-xs md:text-sm text-gray-600">Psicóloga</p>
                     </div>
-                </div>
+                    </div>
                 <nav class="hidden md:flex space-x-8 font-semibold">
-                    <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition-colors">Início</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 transition-colors">Sobre Mim</a>
-                    <a href="#servicos" class="text-gray-700 hover:text-blue-600 transition-colors">Serviços</a>
-                    <a href="#contato" class="text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                    <a href="#inicio" class="text-azul-marinho hover:text-verde-azulado transition-colors">Início</a>
+                    <a href="#sobre" class="text-azul-marinho hover:text-verde-azulado transition-colors">Sobre Mim</a>
+                    <a href="#servicos" class="text-azul-marinho hover:text-verde-azulado transition-colors">Serviços</a>
+                    <a href="#contato" class="text-azul-marinho hover:text-verde-azulado transition-colors">Contato</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center text-center px-4" style="background-image: url('public/hero_background.jpg'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-blue-900/40"></div>
-        <div class="relative z-10 pt-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">Aline Tomas</h2>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto text-white drop-shadow-md">Psicóloga</p>
-            <a href="#contato" class="mt-8 inline-block bg-white text-blue-800 font-bold px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gray-200 shadow-xl">
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-end text-center px-4 pb-20" style="background-image: url('public/hero_background.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-azul-gelo/70"></div>
+        <div class="relative z-10 flex flex-col items-center justify-end h-full w-full">
+            <a href="#contato" class="mt-auto bg-azul-marinho text-branco font-bold px-8 py-3 text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gray-700 shadow-xl">
                 Agendar Consulta
             </a>
         </div>
@@ -59,11 +73,11 @@
     <section id="sobre" class="py-20 bg-white">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-16">
-                 <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                 <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
                     Psicoterapia especializada para adolescentes, adultos, casais e famílias
                 </p>
-                <h2 class="text-4xl font-bold mb-4">Sobre Mim</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-azul-marinho mb-4">Sobre Mim</h2>
+                <div class="w-24 h-1 bg-verde-azulado mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -71,8 +85,8 @@
                     <p class="leading-relaxed"><strong>Psicóloga com CRP: 06/120927</strong>, formada há 11 anos e com 10 anos de vivência no mundo do trabalho em psicologia social.</p>
                     <p class="leading-relaxed">Minha experiência inclui atendimentos individuais e em grupos, avaliando os problemas da sociedade nos eixos de saúde pública e políticas sociais. Tenho experiência em acompanhamentos em casos de violência doméstica, álcool e droga, orientação sobre direitos da criança e adolescentes em casa de acolhimento, atendimentos de abuso infantil, pessoas em situação de rua, acolhimento e orientação para grupos de família.</p>
                     <p class="leading-relaxed">Atuo no consultório clínico há 6 anos como <strong>Terapeuta de Família e Casal</strong>, atendimentos de adolescente e adulto, buscando sempre aprimorar meus conhecimentos ofertando um melhor atendimento.</p>
-                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                        <h4 class="font-semibold mb-2">Especialização:</h4>
+                    <div class="bg-azul-gelo p-6 rounded-lg border-l-4 border-verde-azulado">
+                        <h4 class="font-semibold text-azul-marinho mb-2">Especialização:</h4>
                         <p>Intervenção e Práticas Sistêmica - Terapia Família e Casal</p>
                         <p class="mt-2">Estudante de Neuropsicologia</p>
                     </div>
@@ -84,45 +98,45 @@
         </div>
     </section>
     
-    <section id="missao" class="py-20 bg-gray-100">
+    <section id="missao" class="py-20 bg-azul-marinho text-branco">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Missão, Visão, Valores</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
-                 <p class="text-xl text-gray-700 mt-4">Atendimento presencial e online</p>
+                <div class="w-24 h-1 bg-verde-azulado mx-auto"></div>
+                <p class="text-xl mt-4">Atendimento presencial e online</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4">Missão</h3>
+                <div class="bg-branco text-cinza-texto rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Missão</h3>
                     <p>Oferecer um espaço de acolhimento e escuta especializada, onde indivíduos, casais e famílias encontram apoio para florescer, superar desafios e construir relações mais autênticas e saudáveis.</p>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4">Visão</h3>
+                <div class="bg-branco text-cinza-texto rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Visão</h3>
                     <p>Ser uma referência em cuidado e transformação humana, contribuindo para uma sociedade com pessoas mais resilientes, conectadas e emocionalmente saudáveis.</p>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4">Valores</h3>
+                <div class="bg-branco text-cinza-texto rounded-lg p-8 text-center shadow-lg">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Valores</h3>
                     <p class="text-left text-sm">
-                        • <strong>Acolhimento:</strong> Um espaço seguro, empático e livre de julgamentos, onde sua história é ouvida e respeitada.<br>
-                        • <strong>Ética e Respeito:</strong> Compromisso absoluto com a confidencialidade, a integridade e a sua autonomia em todo o processo.<br>
-                        • <strong>Transformação:</strong> Dedicação total ao seu crescimento, buscando um aprimoramento contínuo para facilitar suas conquistas e superações.<br>
-                        • <strong>Humanização:</strong> Um olhar para o ser humano em sua totalidade, valorizando suas experiências, seu contexto e sua singularidade.
+                        • <strong>Acolhimento:</strong> Um espaço seguro, empático e livre de julgamentos, onde sua história é ouvida e respeitada.
+                        <br>• <strong>Ética e Respeito:</strong> Compromisso absoluto com a confidencialidade, a integridade e a sua autonomia em todo o processo.
+                        <br>• <strong>Transformação:</strong> Dedicação total ao seu crescimento, buscando um aprimoramento contínuo para facilitar suas conquistas e superações.
+                        <br>• <strong>Humanização:</strong> Um olhar para o ser humano em sua totalidade, valorizando suas experiências, seu contexto e sua singularidade.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicos" class="py-20 bg-white">
+    <section id="servicos" class="py-20 bg-azul-gelo">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Meus Serviços</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-xl text-gray-700 mt-4">Atendimento presencial e online</p>
+                <h2 class="text-4xl font-bold text-azul-marinho mb-4">Meus Serviços</h2>
+                <div class="w-24 h-1 bg-verde-azulado mx-auto"></div>
+                <p class="text-xl text-cinza-texto mt-4">Atendimento presencial e online</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-xl font-semibold mb-4">Terapia Individual</h3>
+                <div class="bg-branco rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Terapia Individual</h3>
                     <p class="text-gray-600 mb-4">Atendimento para adolescentes e adultos com foco no crescimento pessoal e bem-estar emocional.</p>
                     <ul class="text-sm text-left list-disc list-inside">
                         <li>Ansiedade e depressão</li>
@@ -130,8 +144,8 @@
                         <li>Gestão de emoções</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-xl font-semibold mb-4">Terapia de Casal</h3>
+                <div class="bg-branco rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Terapia de Casal</h3>
                     <p class="text-gray-600 mb-4">Especialização em Terapia Sistêmica para fortalecer relacionamentos e resolver conflitos.</p>
                      <ul class="text-sm text-left list-disc list-inside">
                         <li>Comunicação efetiva</li>
@@ -139,8 +153,8 @@
                         <li>Fortalecimento do vínculo</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <h3 class="text-xl font-semibold mb-4">Terapia Familiar</h3>
+                <div class="bg-branco rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-azul-marinho mb-4">Terapia Familiar</h3>
                     <p class="text-gray-600 mb-4">Abordagem sistêmica para melhorar a dinâmica familiar e promover harmonia no lar.</p>
                      <ul class="text-sm text-left list-disc list-inside">
                         <li>Dinâmica familiar</li>
@@ -152,29 +166,32 @@
         </div>
     </section>
 
-    <section id="contato" class="py-20 bg-gray-100">
+    <section id="contato" class="py-20 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
              <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Entre em Contato</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-xl text-gray-700 mt-4">Estou aqui para ajudar você em sua jornada de bem-estar.</p>
+                <h2 class="text-4xl font-bold text-azul-marinho mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-verde-azulado mx-auto"></div>
+                <p class="text-xl text-cinza-texto mt-4">Estou aqui para ajudar você em sua jornada de bem-estar</p>
             </div>
-            <div class="bg-white rounded-2xl p-8 md:p-12 text-center shadow-xl">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Agende sua Consulta pelo WhatsApp</h3>
-                <a href="https://api.whatsapp.com/send/?phone=5511952064305&text=Ol%C3%A1%2C+Aline%21+Encontrei+seu+contato+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+as+consultas." target="_blank" rel="noopener noreferrer" class="inline-block bg-whatsapp-green hover:bg-green-700 rounded-full p-4 transition-transform transform hover:scale-110 shadow-lg">
-                    <img src="public/WhatsApp_Logo.png" alt="Ícone do WhatsApp" class="w-16 h-16" />
-                </a>
-                <div class="mt-8 text-left space-y-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-sm">
+                     <p><strong>Localização:</strong> Rua Heitor Alves de Amorim, 31, Campo Limpo - São Paulo</p>
                      <p><strong>Telefone:</strong> (11) 95206-4305</p>
                      <p><strong>Email:</strong> alinetomas63@yahoo.com.br</p>
-                     <p><strong>Localização:</strong> Rua Heitor Alves de Amorim, 31, Campo Limpo - São Paulo</p>
                      <p><strong>Modalidades:</strong> Atendimento presencial e online</p>
+                     <p><strong>Horários:</strong> Horários flexíveis</p>
+                </div>
+                <div class="bg-azul-gelo rounded-2xl p-8 text-center">
+                    <h3 class="text-2xl font-semibold text-azul-marinho mb-6">Agende sua Consulta</h3>
+                    <a href="https://api.whatsapp.com/send/?phone=5511952064305&text=Ol%C3%A1%2C+Aline%21+Encontrei+seu+contato+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+as+consultas." target="_blank" rel="noopener noreferrer" class="inline-block bg-whatsapp-green hover:bg-green-700 rounded-full p-4 transition-transform transform hover:scale-110 shadow-lg">
+                        <img src="public/WhatsApp_Logo.png" alt="Ícone do WhatsApp" class="w-16 h-16" />
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-azul-marinho text-branco py-8">
         <div class="container mx-auto px-4 text-center">
             <p class="mb-2"><strong>Aline Tomas</strong> - Psicóloga - CRP: 06/120927</p>
             <p class="text-sm text-gray-400">Transformando vidas através do cuidado e acolhimento em psicoterapia.</p>
